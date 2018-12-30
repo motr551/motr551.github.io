@@ -1,0 +1,52 @@
+body {
+    margin: 20px;
+}
+
+div.sketchPad {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: blue;
+  margin-top: auto ;
+
+  border: 3px solid blue;
+}
+div>div {
+  background-color: white;
+}
+
+.ui {
+  margin: 0 0 20px 0;
+  font-size: 60px;
+}
+ input {
+  font-size: 60px;
+  width: 240px;
+ }
+
+ button{
+   font-size: 60px;
+ }
+
+select{
+  font-size: 60px;
+}
+div.ui>p.colorSelect {
+  color: black;
+  margin: 0;
+}
+div>select option[value="black"] {
+  color: black;
+}
+div>select option[value="red"] {
+  color: red;
+}
+div>select option[value="blue"] {
+  color: blue;
+}
+div>select option[value="green"] {
+  color: green;
+}
+
+div.ui>.rubberButton {
+  float: right;
+}

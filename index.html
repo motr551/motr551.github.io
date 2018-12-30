@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  let isMobile =    /iPhone|iPad|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+    let head = document.querySelector('head');
+    let link = document.createElement('link');
+    link.setAttribute("rel","stylesheet"); 
+    link.setAttribute("href","./css/padMobile.css"); 
+
+    head.appendChild(link);
+
+    // uiContent  = document.querySelector('html').innerHTML;
+    // document.querySelector('html').innerHTML =  uiContent;
+
+  } else {
+    let head = document.querySelector('head');
+    let link = document.createElement('link');
+    link.setAttribute("rel","stylesheet"); 
+    link.setAttribute("href","./css/padDesktop.css"); 
+
+    head.appendChild(link);
+  //   document.querySelector('head').innerHTML =
+  //     '<link rel="stylesheet" href="./css/padDesktop.css">';
+  }
+                                
+</script>
+</head>
+<body style="
+    margin: 20px;
+">
+
+    <div class="ui">
+<!--     Enter columns of grid and draw  -->
+    Enter columns of the grid:
+    <input type="number" value="2">
+    <button onclick="getGridSizeUIandDisplay()">
+      Enter</button>
+    <br><br>
+
+<!--     Select colour to drawing -->
+    <p class="colorSelect" >Set drawing colour:</p>
+    <select onchange="getSelectedColourUI()">
+      <option value="black">Black</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="randomColour">Random Colour</option>
+    </select>
+
+<!--     Toggle the rubber tool -->
+    <button class="rubberButton" onclick="setRubberToolUI()">
+      Rubber OFF
+    </button>
+
+    </div>
+
+<!--   Sketch Pad to be drawn by script -->
+  <div class="sketchPad">
+  </div>
+
+<!--   <script src="./js/pageLoadDelay.js"></script> -->
+  <script src="./js/sketchPad.js">
+
+  </script>
+
+
+</body>
+</html>
